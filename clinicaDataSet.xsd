@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="clinicaDataSet" targetNamespace="http://tempuri.org/clinicaDataSet.xsd" xmlns:mstns="http://tempuri.org/clinicaDataSet.xsd" xmlns="http://tempuri.org/clinicaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="dbclinica" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbclinica (MySettings)" PropertyReference="ApplicationSettings.Agendas.My.MySettings.GlobalReference.Default.dbclinica" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sql_pacientesTableAdapter" GeneratorDataComponentClassName="sql_pacientesTableAdapter" Name="sql_pacientes" UserDataComponentName="sql_pacientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbclinica (MySettings)" DbObjectName="sql_pacientes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_paciente, Paciente, activo FROM sql_pacientes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_paciente" DataSetColumn="Id_paciente" />
+              <Mapping SourceColumn="Paciente" DataSetColumn="Paciente" />
+              <Mapping SourceColumn="activo" DataSetColumn="activo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="clinicaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="clinicaDataSet" msprop:Generator_UserDSName="clinicaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sql_pacientes" msprop:Generator_TableClassName="sql_pacientesDataTable" msprop:Generator_TableVarName="tablesql_pacientes" msprop:Generator_TablePropName="sql_pacientes" msprop:Generator_RowDeletingName="sql_pacientesRowDeleting" msprop:Generator_UserTableName="sql_pacientes" msprop:Generator_RowChangingName="sql_pacientesRowChanging" msprop:Generator_RowEvHandlerName="sql_pacientesRowChangeEventHandler" msprop:Generator_RowDeletedName="sql_pacientesRowDeleted" msprop:Generator_RowEvArgName="sql_pacientesRowChangeEvent" msprop:Generator_RowChangedName="sql_pacientesRowChanged" msprop:Generator_RowClassName="sql_pacientesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_paciente" msprop:Generator_ColumnVarNameInTable="columnId_paciente" msprop:Generator_ColumnPropNameInRow="Id_paciente" msprop:Generator_ColumnPropNameInTable="Id_pacienteColumn" msprop:Generator_UserColumnName="Id_paciente" type="xs:int" minOccurs="0" />
+              <xs:element name="Paciente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPaciente" msprop:Generator_ColumnPropNameInRow="Paciente" msprop:Generator_ColumnPropNameInTable="PacienteColumn" msprop:Generator_UserColumnName="Paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_UserColumnName="activo" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

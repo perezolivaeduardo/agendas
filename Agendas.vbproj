@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6776546-15D9-4AC8-B691-83F932A8DC3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Agendas.My.MyApplication</StartupObject>
+    <RootNamespace>Agendas</RootNamespace>
+    <AssemblyName>Agendas</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://www.programacionintegral.com/public_html/sistemas/clinica/agendas/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.programacionintegral.com/sitemas/clinica/agendas/</InstallUrl>
+    <ProductName>Agenda</ProductName>
+    <PublisherName>Eduardo Perez Oliva</PublisherName>
+    <SuiteName>Administracion Integral</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Agendas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Agendas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>826CF6512E60F31B5D536A87B3A4A27D1E21D183</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>EXITEML.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agenda.Designer.vb">
+      <DependentUpon>agenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="bitacora.Designer.vb">
+      <DependentUpon>bitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion\catalogo_medicos.Designer.vb">
+      <DependentUpon>catalogo_medicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\catalogo_medicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion\cfg_generales.Designer.vb">
+      <DependentUpon>cfg_generales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\cfg_generales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion\dbconfig.designer.vb">
+      <DependentUpon>dbconfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\dbconfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion\eliminar_diayhora.Designer.vb">
+      <DependentUpon>eliminar_diayhora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\eliminar_diayhora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crear_editar_nota.Designer.vb">
+      <DependentUpon>crear_editar_nota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="crear_editar_nota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="db_baseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_baseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_baseDataSet.vb">
+      <DependentUpon>db_baseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="horario.Designer.vb">
+      <DependentUpon>horario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="horario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imprimir.Designer.vb">
+      <DependentUpon>imprimir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="imprimir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="localizar.Designer.vb">
+      <DependentUpon>localizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="localizar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion\crear_agendas.Designer.vb">
+      <DependentUpon>crear_agendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\crear_agendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="configuracion\sdk.vb" />
+    <Compile Include="configuracion\pruebas.Designer.vb">
+      <DependentUpon>pruebas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion\pruebas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pendientes_pro_cancelar.Designer.vb">
+      <DependentUpon>Pendientes_pro_cancelar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pendientes_pro_cancelar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuarios.Designer.vb">
+      <DependentUpon>usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="agenda.resx">
+      <DependentUpon>agenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bitacora.resx">
+      <DependentUpon>bitacora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion\catalogo_medicos.resx">
+      <DependentUpon>catalogo_medicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion\cfg_generales.resx">
+      <DependentUpon>cfg_generales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion\dbconfig.resx">
+      <DependentUpon>dbconfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion\eliminar_diayhora.resx">
+      <DependentUpon>eliminar_diayhora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crear_editar_nota.resx">
+      <DependentUpon>crear_editar_nota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="horario.resx">
+      <DependentUpon>horario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imprimir.resx">
+      <DependentUpon>imprimir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="localizar.resx">
+      <DependentUpon>localizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion\crear_agendas.resx">
+      <DependentUpon>crear_agendas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion\pruebas.resx">
+      <DependentUpon>pruebas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agenda.rdlc" />
+    <EmbeddedResource Include="Pendientes_pro_cancelar.resx">
+      <DependentUpon>Pendientes_pro_cancelar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarios.resx">
+      <DependentUpon>usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="db_baseDataSet.xsc">
+      <DependentUpon>db_baseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_baseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_baseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_baseDataSet.xss">
+      <DependentUpon>db_baseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\VisualBasic" />
+    <None Include="Resources\minilogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo verde.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\citas_medicas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Engine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time &amp; Date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backgammon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EXITEML.ICO" />
+    <None Include="Resources\Index.png" />
+    <None Include="Resources\Encrypted.png" />
+    <None Include="Resources\Decrypted.png" />
+    <None Include="Resources\Firewall.png" />
+    <None Include="Resources\Vista Search.png" />
+    <None Include="Resources\sync.jpg" />
+    <None Include="Resources\Windows Calendar.png" />
+    <None Include="Resources\Printer.png" />
+    <None Include="Resources\Download 5.png" />
+    <None Include="Resources\Error 2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
