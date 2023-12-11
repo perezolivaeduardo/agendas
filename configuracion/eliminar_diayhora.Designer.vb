@@ -24,6 +24,7 @@ Partial Class eliminar_diayhora
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.lbldia = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -36,8 +37,12 @@ Partial Class eliminar_diayhora
         Me.dia = New System.Windows.Forms.NumericUpDown()
         Me.id_medico = New System.Windows.Forms.TextBox()
         Me.CitasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Db_baseDataSet = New Agendas.db_baseDataSet()
+        Me.CitasTableAdapter = New Agendas.db_baseDataSetTableAdapters.citasTableAdapter()
+        Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvfecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,11 +52,6 @@ Partial Class eliminar_diayhora
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Db_baseDataSet = New Agendas.db_baseDataSet()
-        Me.CitasTableAdapter = New Agendas.db_baseDataSetTableAdapters.citasTableAdapter()
-        Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -92,6 +92,15 @@ Partial Class eliminar_diayhora
         Me.SplitContainer1.Size = New System.Drawing.Size(929, 217)
         Me.SplitContainer1.SplitterDistance = 40
         Me.SplitContainer1.TabIndex = 0
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(721, 10)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(177, 23)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Eliminar la hora de todos los dias"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'lbldia
         '
@@ -196,7 +205,7 @@ Partial Class eliminar_diayhora
         '
         Me.CitasDataGridView.AutoGenerateColumns = False
         Me.CitasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CitasDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
+        Me.CitasDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.dgvfecha, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
         Me.CitasDataGridView.DataSource = Me.CitasBindingSource
         Me.CitasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CitasDataGridView.Location = New System.Drawing.Point(0, 0)
@@ -204,17 +213,46 @@ Partial Class eliminar_diayhora
         Me.CitasDataGridView.Size = New System.Drawing.Size(929, 173)
         Me.CitasDataGridView.TabIndex = 0
         '
+        'CitasBindingSource
+        '
+        Me.CitasBindingSource.DataMember = "citas"
+        Me.CitasBindingSource.DataSource = Me.Db_baseDataSet
+        '
+        'Db_baseDataSet
+        '
+        Me.Db_baseDataSet.DataSetName = "db_baseDataSet"
+        Me.Db_baseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CitasTableAdapter
+        '
+        Me.CitasTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
+        Me.TableAdapterManager.citasTableAdapter = Me.CitasTableAdapter
+        Me.TableAdapterManager.EsquemaTableAdapter = Nothing
+        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
+        Me.TableAdapterManager.medicosTableAdapter = Nothing
+        Me.TableAdapterManager.notasTableAdapter = Nothing
+        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
+
+        Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
+        Me.TableAdapterManager.to_doTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_medico"
         Me.DataGridViewTextBoxColumn1.HeaderText = "id_medico"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
-        'DataGridViewTextBoxColumn2
+        'dgvfecha
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "fecha"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "fecha"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.dgvfecha.DataPropertyName = "fecha"
+        Me.dgvfecha.HeaderText = "fecha"
+        Me.dgvfecha.Name = "dgvfecha"
         '
         'DataGridViewTextBoxColumn3
         '
@@ -271,45 +309,6 @@ Partial Class eliminar_diayhora
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
-        'CitasBindingSource
-        '
-        Me.CitasBindingSource.DataMember = "citas"
-        Me.CitasBindingSource.DataSource = Me.Db_baseDataSet
-        '
-        'Db_baseDataSet
-        '
-        Me.Db_baseDataSet.DataSetName = "db_baseDataSet"
-        Me.Db_baseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CitasTableAdapter
-        '
-        Me.CitasTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
-        Me.TableAdapterManager.citasTableAdapter = Me.CitasTableAdapter
-        Me.TableAdapterManager.dias_festivosTableAdapter = Nothing
-        Me.TableAdapterManager.EsquemaTableAdapter = Nothing
-        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
-        Me.TableAdapterManager.medicosTableAdapter = Nothing
-        Me.TableAdapterManager.notasTableAdapter = Nothing
-        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_generalesTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
-        Me.TableAdapterManager.to_doTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(721, 10)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(177, 23)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Eliminar la hora de todos los dias"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'eliminar_diayhora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -345,19 +344,19 @@ Partial Class eliminar_diayhora
     Friend WithEvents CitasTableAdapter As Agendas.db_baseDataSetTableAdapters.citasTableAdapter
     Friend WithEvents TableAdapterManager As Agendas.db_baseDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CitasDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents lbldia As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents dgvfecha As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
 End Class

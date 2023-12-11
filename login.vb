@@ -22,4 +22,18 @@
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         End
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        If My.Computer.Name = "SISTEMAS" Then
+            usuario.Text = "EDU"
+            pw.Text = "99"
+        End If
+    End Sub
+
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If My.Computer.Name = "SISTEMAS" Then
+            usuario.Text = "EDU"
+            pw.Text = "99"
+        End If
+    End Sub
 End Class

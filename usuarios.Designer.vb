@@ -74,7 +74,6 @@ Partial Class usuarios
         Me.TableAdapterManager.citasTableAdapter = Nothing
         Me.TableAdapterManager.EsquemaTableAdapter = Nothing
         Me.TableAdapterManager.medicosTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_generalesTableAdapter = Nothing
         Me.TableAdapterManager.tbl_usuariosTableAdapter = Me.Tbl_usuariosTableAdapter
         Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

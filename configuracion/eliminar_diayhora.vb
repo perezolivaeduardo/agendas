@@ -1,29 +1,13 @@
 ﻿Public Class eliminar_diayhora
 
-    
-
-    Private Sub SplitContainer1_Panel2_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles SplitContainer1.Panel2.Paint
-
-    End Sub
-
-    Private Sub CitasBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs)
-       
-    End Sub
-
     Private Sub eliminar_diayhora_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Db_baseDataSet.citas' Puede moverla o quitarla según sea necesario.
         Me.CitasTableAdapter.Fill(Me.Db_baseDataSet.citas)
-
-    End Sub
-
-    Private Sub SplitContainer1_Panel1_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         'TODO: esta línea de código carga datos en la tabla 'Db_baseDataSet.citas' Puede moverla o quitarla según sea necesario.
         Me.CitasTableAdapter.FillBydiayhora(Me.Db_baseDataSet.citas, dia.Value, id_medico.Text, hora.Value, minuto.Value)
-
     End Sub
 
     Private Sub dia_ValueChanged(sender As System.Object, e As System.EventArgs) Handles dia.ValueChanged
@@ -37,8 +21,6 @@
         If i = 7 Then lbldia.Text = "Domingo"
     End Sub
 
-    
-   
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Dim adap As New db_baseDataSetTableAdapters.citasTableAdapter
         adap.Eliminar_citas_diaYhora(dia.Value, id_medico.Text, hora.Value, minuto.Value)
@@ -51,5 +33,12 @@
         adap.eliminar_una_hora_de_toda_la_agenda(id_medico.Text, hora.Value, minuto.Value)
         adap.Dispose()
         MsgBox("Borrado")
+    End Sub
+
+    Private Sub CitasDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles CitasDataGridView.CellContentClick
+        Dim f As Date
+        f = CitasDataGridView.CurrentRow.Cells("dgvfecha").Value
+        Dim dia As Integer = f.DayOfWeek
+        MsgBox(dia)
     End Sub
 End Class

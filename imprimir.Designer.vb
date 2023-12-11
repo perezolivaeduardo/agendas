@@ -63,6 +63,7 @@ Partial Class imprimir
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Agendas.Agenda.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(549, 409)
         Me.ReportViewer1.TabIndex = 0
         Me.ReportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth

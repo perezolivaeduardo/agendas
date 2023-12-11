@@ -200,7 +200,7 @@ Partial Class bitacora
         Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
         Me.TableAdapterManager.medicosTableAdapter = Nothing
         Me.TableAdapterManager.sql_citasTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_generalesTableAdapter = Nothing
+
         Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

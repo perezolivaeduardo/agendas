@@ -28,18 +28,22 @@ Partial Class main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(main))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripSplitButton()
-        Me.DatosGeneralesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MEDICOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearAgendasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.PruebasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InfToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Menu_Directorio = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.BTN_BITACORA = New System.Windows.Forms.ToolStripButton()
         Me.dgvm = New System.Windows.Forms.DataGridView()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DisponibleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ConfigurarAgendaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CitasdisponiblesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_baseDataSet = New Agendas.db_baseDataSet()
         Me.Citas_disponiblesTableAdapter = New Agendas.db_baseDataSetTableAdapters.citas_disponiblesTableAdapter()
@@ -53,6 +57,7 @@ Partial Class main
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.dgvm, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.CitasdisponiblesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -72,7 +77,7 @@ Partial Class main
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.BTN_BITACORA})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(607, 71)
+        Me.ToolStrip1.Size = New System.Drawing.Size(714, 71)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -80,7 +85,7 @@ Partial Class main
         '
         Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosGeneralesToolStripMenuItem, Me.MEDICOSToolStripMenuItem, Me.CrearAgendasToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.ToolStripSeparator1, Me.PruebasToolStripMenuItem})
+        Me.ToolStripButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MEDICOSToolStripMenuItem, Me.CrearAgendasToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.ToolStripSeparator1, Me.PruebasToolStripMenuItem, Me.InfToolStripMenuItem, Me.TestToolStripMenuItem, Me.Menu_Directorio})
         Me.ToolStripButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton1.Image = Global.Agendas.My.Resources.Resources.Search_Engine
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -88,40 +93,52 @@ Partial Class main
         Me.ToolStripButton1.Size = New System.Drawing.Size(80, 68)
         Me.ToolStripButton1.Text = "ToolStripButton1"
         '
-        'DatosGeneralesToolStripMenuItem
-        '
-        Me.DatosGeneralesToolStripMenuItem.Name = "DatosGeneralesToolStripMenuItem"
-        Me.DatosGeneralesToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
-        Me.DatosGeneralesToolStripMenuItem.Text = "Datos Generales"
-        '
         'MEDICOSToolStripMenuItem
         '
         Me.MEDICOSToolStripMenuItem.Name = "MEDICOSToolStripMenuItem"
-        Me.MEDICOSToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
+        Me.MEDICOSToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
         Me.MEDICOSToolStripMenuItem.Text = "MEDICOS"
         '
         'CrearAgendasToolStripMenuItem
         '
         Me.CrearAgendasToolStripMenuItem.Name = "CrearAgendasToolStripMenuItem"
-        Me.CrearAgendasToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
+        Me.CrearAgendasToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
         Me.CrearAgendasToolStripMenuItem.Text = "Crear Agendas"
         '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(190, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
         '
         'PruebasToolStripMenuItem
         '
         Me.PruebasToolStripMenuItem.Name = "PruebasToolStripMenuItem"
-        Me.PruebasToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
-        Me.PruebasToolStripMenuItem.Text = "Pruebas"
+        Me.PruebasToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.PruebasToolStripMenuItem.Text = "Editar INI"
+        '
+        'InfToolStripMenuItem
+        '
+        Me.InfToolStripMenuItem.Name = "InfToolStripMenuItem"
+        Me.InfToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.InfToolStripMenuItem.Text = "Inf"
+        '
+        'TestToolStripMenuItem
+        '
+        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
+        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.TestToolStripMenuItem.Text = "Test"
+        '
+        'Menu_Directorio
+        '
+        Me.Menu_Directorio.Name = "Menu_Directorio"
+        Me.Menu_Directorio.Size = New System.Drawing.Size(182, 26)
+        Me.Menu_Directorio.Text = "Directorio"
         '
         'ToolStripButton2
         '
@@ -147,8 +164,8 @@ Partial Class main
         Me.dgvm.AllowUserToDeleteRows = False
         Me.dgvm.AllowUserToResizeColumns = False
         Me.dgvm.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleGreen
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         Me.dgvm.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvm.AutoGenerateColumns = False
         Me.dgvm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
@@ -156,6 +173,7 @@ Partial Class main
         Me.dgvm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvm.ColumnHeadersVisible = False
         Me.dgvm.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DisponibleDataGridViewTextBoxColumn})
+        Me.dgvm.ContextMenuStrip = Me.ContextMenuStrip1
         Me.dgvm.DataSource = Me.CitasdisponiblesBindingSource
         Me.dgvm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvm.Location = New System.Drawing.Point(0, 0)
@@ -164,7 +182,7 @@ Partial Class main
         Me.dgvm.RowHeadersVisible = False
         Me.dgvm.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvm.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.dgvm.Size = New System.Drawing.Size(607, 297)
+        Me.dgvm.Size = New System.Drawing.Size(714, 226)
         Me.dgvm.TabIndex = 3
         '
         'IdDataGridViewTextBoxColumn
@@ -193,6 +211,18 @@ Partial Class main
         Me.DisponibleDataGridViewTextBoxColumn.HeaderText = "Disponible"
         Me.DisponibleDataGridViewTextBoxColumn.Name = "DisponibleDataGridViewTextBoxColumn"
         Me.DisponibleDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfigurarAgendaToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(176, 26)
+        '
+        'ConfigurarAgendaToolStripMenuItem
+        '
+        Me.ConfigurarAgendaToolStripMenuItem.Name = "ConfigurarAgendaToolStripMenuItem"
+        Me.ConfigurarAgendaToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.ConfigurarAgendaToolStripMenuItem.Text = "Configurar Agenda"
         '
         'CitasdisponiblesBindingSource
         '
@@ -224,7 +254,7 @@ Partial Class main
         Me.SplitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.SplitContainer1.Panel2.CausesValidation = False
         Me.SplitContainer1.Panel2Collapsed = True
-        Me.SplitContainer1.Size = New System.Drawing.Size(607, 403)
+        Me.SplitContainer1.Size = New System.Drawing.Size(714, 332)
         Me.SplitContainer1.SplitterDistance = 502
         Me.SplitContainer1.TabIndex = 5
         '
@@ -250,7 +280,7 @@ Partial Class main
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.dgvm)
-        Me.SplitContainer2.Size = New System.Drawing.Size(607, 403)
+        Me.SplitContainer2.Size = New System.Drawing.Size(714, 332)
         Me.SplitContainer2.SplitterDistance = 102
         Me.SplitContainer2.TabIndex = 4
         '
@@ -263,7 +293,7 @@ Partial Class main
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 4
         Me.PictureBox4.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox4, "Actualiza la informacion de ultimo minuto.")
+        Me.ToolTip1.SetToolTip(Me.PictureBox4, "Localizar una citas de una persona.")
         '
         'PictureBox3
         '
@@ -280,7 +310,7 @@ Partial Class main
         '
         Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox2.Image = Global.Agendas.My.Resources.Resources.Log_Off
-        Me.PictureBox2.Location = New System.Drawing.Point(552, 3)
+        Me.PictureBox2.Location = New System.Drawing.Point(659, 3)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -291,7 +321,7 @@ Partial Class main
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.Agendas.My.Resources.Resources.Download_5
-        Me.PictureBox1.Location = New System.Drawing.Point(494, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(601, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -304,7 +334,7 @@ Partial Class main
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.CadetBlue
-        Me.Label1.Location = New System.Drawing.Point(476, 73)
+        Me.Label1.Location = New System.Drawing.Point(583, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(128, 29)
         Me.Label1.TabIndex = 0
@@ -315,7 +345,7 @@ Partial Class main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
-        Me.ClientSize = New System.Drawing.Size(607, 474)
+        Me.ClientSize = New System.Drawing.Size(714, 403)
         Me.ControlBox = False
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -323,10 +353,12 @@ Partial Class main
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "main"
-        Me.Text = "SISTEMA DE AGENDAS ELECTRONICAS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "SISTEMA DE AGENDAS ELECTRONICAS - WEB"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.dgvm, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.CitasdisponiblesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
@@ -345,7 +377,6 @@ Partial Class main
     End Sub
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripSplitButton
-    Friend WithEvents DatosGeneralesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MEDICOSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CrearAgendasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents dgvm As System.Windows.Forms.DataGridView
@@ -368,5 +399,9 @@ Partial Class main
     Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DisponibleDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ConfigurarAgendaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InfToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Menu_Directorio As ToolStripMenuItem
 End Class

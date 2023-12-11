@@ -1,4 +1,4 @@
-﻿
+﻿Imports System.Text.RegularExpressions
 Module sdk
     Public fileini As String
     Public user_id As Integer
@@ -10,6 +10,14 @@ Module sdk
     Structure cmd_result
         Dim ok As Boolean
         Dim msg As String
+    End Structure
+
+    Structure Persona
+        Dim celular As String
+        Dim paterno As String
+        Dim materno As String
+        Dim nombre As String
+        Dim existe As Boolean
     End Structure
 
     Structure v_citas
@@ -59,15 +67,13 @@ Module sdk
     End Function
 
     Function leer_db(ByVal cmd As String) As DataTable
-       Dim da As New OleDb.OleDbDataAdapter
+        Dim da As New OleDb.OleDbDataAdapter
         Dim tbl As New DataTable
         ' Dim cs As String = My.Settings.dbclinica
         ' da = New Data.OleDb.OleDbDataAdapter(cmd, cs)
         da.Fill(tbl)
         leer_db = tbl
     End Function
-
-
 
     Function commando(ByVal cmd As String) As cmd_result
         Try
@@ -91,7 +97,12 @@ Module sdk
     End Function
 
     Function formatea_fecha(ByVal fecha As Date) As String
-        formatea_fecha = Format(fecha, "dddd dd MMMM")
+        Try
+            formatea_fecha = Format(fecha, "dddd dd MMMM")
+        Catch ex As Exception
+            formatea_fecha = ""
+        End Try
+
     End Function
 
     Function citas_Disponibles_x_dia(ByVal fecha As Date, ByVal id_medico As Integer) As DataTable
@@ -125,6 +136,74 @@ Module sdk
         Catch ex As Exception
             valida_nota = True
         End Try
+    End Function
+
+    Function EsNumeroCelularValido(phoneNumber As String) As Boolean
+        ' Define una expresión regular para verificar el formato del número de teléfono.
+        Dim pattern As String = "^\d{3}\d{3}\d{4}$"
+
+        ' Usa la clase Regex para hacer coincidir la cadena con la expresión regular.
+        Dim regex As New Regex(pattern)
+
+        ' Realiza la coincidencia y verifica si es válida.
+        Dim isMatch As Boolean = regex.IsMatch(phoneNumber)
+
+        Return isMatch
+    End Function
+
+    Public Function ValidaPersona(celular) As Persona
+        Dim Kpersona As Persona
+        Dim sql As String = "Select * from tbl_directorio where celular ='" + celular + "'"
+        Dim tbl As DataTable
+        tbl = leer_tabla(sql)
+        If tbl.Rows.Count = 0 Then
+            Kpersona.existe = False
+        Else
+            If tbl.Rows.Count = 1 Then
+                With Kpersona
+                    .celular = celular
+                    .paterno = tbl.Rows(0).Item("Paterno")
+                    .materno = tbl.Rows(0).Item("Materno")
+                    .nombre = tbl.Rows(0).Item("Nombre")
+                    .existe = True
+                End With
+            Else
+                Dim frm As New Selecciona_persona
+                frm.Cargar(tbl)
+                frm.ShowDialog()
+                If frm.DialogResult = System.Windows.Forms.DialogResult.OK Then
+                    Kpersona.celular = celular
+                    Kpersona.paterno = frm.paterno
+                    Kpersona.materno = frm.materno
+                    Kpersona.nombre = frm.nombre
+                    Kpersona.existe = True
+                Else
+                    Kpersona.existe = False
+                End If
+            End If
+
+        End If
+        Return Kpersona
+    End Function
+
+    Public Function FnAgregar_persona(celular As String, paterno As String, materno As String, nombre As String) As Boolean
+        Try
+            Dim adap As New db_baseDataSetTableAdapters.tbl_directorioTableAdapter
+            adap.Insert(celular, paterno, materno, nombre)
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+
+
+    End Function
+
+    Public Function FN_NombreMedico(id) As String
+        Dim sql As String
+        sql = "SELECT CONCAT(CASE WHEN trato = 'Dr.' THEN 'el' WHEN trato = 'Dra.' THEN 'la' ELSE '' END,' ',trato,' ', nombre   ) AS nombre_completo FROM medicos where id_medico=" + id.ToString
+        Dim Doctor As String = leer_tabla(sql).Rows(0).Item(0)
+        Return Doctor
     End Function
 
 End Module

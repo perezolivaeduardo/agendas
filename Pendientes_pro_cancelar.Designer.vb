@@ -40,10 +40,12 @@ Partial Class Pendientes_pro_cancelar
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.tmemo = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
@@ -101,7 +103,7 @@ Partial Class Pendientes_pro_cancelar
         Me.btn_lista.Image = Global.Agendas.My.Resources.Resources.lista
         Me.btn_lista.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btn_lista.Name = "btn_lista"
-        Me.btn_lista.Size = New System.Drawing.Size(164, 36)
+        Me.btn_lista.Size = New System.Drawing.Size(163, 36)
         Me.btn_lista.Text = "Ver Lista de Pendientes"
         '
         'SplitContainer2
@@ -145,7 +147,7 @@ Partial Class Pendientes_pro_cancelar
         Me.dgv.ReadOnly = True
         Me.dgv.RowHeadersVisible = False
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(503, 169)
+        Me.dgv.Size = New System.Drawing.Size(150, 169)
         Me.dgv.TabIndex = 0
         '
         'Label4
@@ -248,12 +250,14 @@ Partial Class Pendientes_pro_cancelar
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.Panel2.PerformLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

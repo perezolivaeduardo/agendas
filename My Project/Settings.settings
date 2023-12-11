@@ -2,16 +2,19 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
+    <Setting Name="cadena" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=localhost\SQLEXPRESS01;Initial Catalog=agendas;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="ApiServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://apireko.azurewebsites.net/clinica/</Value>
+    </Setting>
     <Setting Name="cs" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=agendas;User ID=sa;Password=Integral2016&lt;/ConnectionString&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=SERVIDOR\SQLEXPRESS;Initial Catalog=agendas;User ID=sistemas;Password=Integral#2023&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=agendas;User ID=sa;Password=Integral2016</Value>
-    </Setting>
-    <Setting Name="cadena" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=agenda;User ID=sa;Password=Integral2016</Value>
+      <Value Profile="(Default)">Data Source=SERVIDOR\SQLEXPRESS;Initial Catalog=agendas;User ID=sistemas;Password=Integral#2023</Value>
     </Setting>
   </Settings>
 </SettingsFile>

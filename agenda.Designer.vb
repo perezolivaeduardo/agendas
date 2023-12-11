@@ -23,8 +23,8 @@ Partial Class frm_agenda
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_agenda))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -35,6 +35,8 @@ Partial Class frm_agenda
         Me.CancelarCitaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_BloquearHorario = New System.Windows.Forms.ToolStripMenuItem()
         Me.DesbloquearHorarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.EliminarHorarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MedicosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_baseDataSet = New Agendas.db_baseDataSet()
         Me.calendario = New System.Windows.Forms.MonthCalendar()
@@ -53,6 +55,10 @@ Partial Class frm_agenda
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NombreLabel1 = New System.Windows.Forms.Label()
         Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblinfo = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.infoIco = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblinfopro = New System.Windows.Forms.ToolStripStatusLabel()
         Me._btn_salir = New System.Windows.Forms.Button()
         Me.SplitContainer5 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer7 = New System.Windows.Forms.SplitContainer()
@@ -98,6 +104,17 @@ Partial Class frm_agenda
         Me.btn_completa = New System.Windows.Forms.ToolStripMenuItem()
         Me.lbl_user = New System.Windows.Forms.ToolStripLabel()
         Me.SplitContainer6 = New System.Windows.Forms.SplitContainer()
+        Me.btn_nowhats = New System.Windows.Forms.Button()
+        Me.btn_addPersona = New System.Windows.Forms.Button()
+        Me.img_valido = New System.Windows.Forms.PictureBox()
+        Me.img_nuevo = New System.Windows.Forms.PictureBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.nombre = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.materno = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.paterno = New System.Windows.Forms.TextBox()
+        Me.logo = New System.Windows.Forms.PictureBox()
         Me.img_proxima = New System.Windows.Forms.PictureBox()
         Me.btn_confirmar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -114,7 +131,6 @@ Partial Class frm_agenda
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.txtfecha = New System.Windows.Forms.TextBox()
         Me.lblfestivos = New System.Windows.Forms.Label()
-        Me.DiasfestivosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btn_crear_nota = New System.Windows.Forms.Button()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.dgvnota = New System.Windows.Forms.DataGridView()
@@ -124,31 +140,38 @@ Partial Class frm_agenda
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MedicosTableAdapter = New Agendas.db_baseDataSetTableAdapters.medicosTableAdapter()
-        Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
         Me.Lista_esperaTableAdapter = New Agendas.db_baseDataSetTableAdapters.lista_esperaTableAdapter()
         Me.NotasTableAdapter = New Agendas.db_baseDataSetTableAdapters.notasTableAdapter()
-        Me.Dias_festivosTableAdapter = New Agendas.db_baseDataSetTableAdapters.dias_festivosTableAdapter()
+        Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.dgvalternas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer4.Panel1.SuspendLayout()
         Me.SplitContainer4.Panel2.SuspendLayout()
         Me.SplitContainer4.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
+        CType(Me.SplitContainer5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer5.Panel1.SuspendLayout()
         Me.SplitContainer5.Panel2.SuspendLayout()
         Me.SplitContainer5.SuspendLayout()
+        CType(Me.SplitContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer7.Panel1.SuspendLayout()
         Me.SplitContainer7.Panel2.SuspendLayout()
         Me.SplitContainer7.SuspendLayout()
@@ -158,11 +181,14 @@ Partial Class frm_agenda
         Me.grupo_proxima.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer6.Panel1.SuspendLayout()
         Me.SplitContainer6.Panel2.SuspendLayout()
         Me.SplitContainer6.SuspendLayout()
+        CType(Me.img_valido, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.img_nuevo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.img_proxima, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DiasfestivosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvnota, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,10 +210,12 @@ Partial Class frm_agenda
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.AllowUserToResizeColumns = False
         Me.dgv.AllowUserToResizeRows = False
+        Me.dgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv.ContextMenuStrip = Me.ContextMenuStrip1
         Me.dgv.DataBindings.Add(New System.Windows.Forms.Binding("BackgroundColor", Me.MedicosBindingSource, "color", True))
-        Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv.Location = New System.Drawing.Point(0, 0)
         Me.dgv.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgv.Name = "dgv"
@@ -195,20 +223,20 @@ Partial Class frm_agenda
         Me.dgv.RowHeadersVisible = False
         Me.dgv.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(505, 322)
+        Me.dgv.Size = New System.Drawing.Size(581, 380)
         Me.dgv.TabIndex = 2
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CitaEnUnMesToolStripMenuItem, Me.CambiarDeDiaToolStripMenuItem, Me.EditarCitaToolStripMenuItem, Me.ToolStripSeparator1, Me.CancelarCitaToolStripMenuItem, Me.btn_BloquearHorario, Me.DesbloquearHorarioToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CitaEnUnMesToolStripMenuItem, Me.CambiarDeDiaToolStripMenuItem, Me.EditarCitaToolStripMenuItem, Me.ToolStripSeparator1, Me.CancelarCitaToolStripMenuItem, Me.btn_BloquearHorario, Me.DesbloquearHorarioToolStripMenuItem, Me.ToolStripSeparator2, Me.EliminarHorarioToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(233, 238)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(233, 282)
         '
         'CitaEnUnMesToolStripMenuItem
         '
         Me.CitaEnUnMesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.CitaEnUnMesToolStripMenuItem.Image = Global.Agendas.My.Resources.Resources.Time___Date
+        Me.CitaEnUnMesToolStripMenuItem.Image = Global.Agendas.My.Resources.Resources.calendario
         Me.CitaEnUnMesToolStripMenuItem.Name = "CitaEnUnMesToolStripMenuItem"
         Me.CitaEnUnMesToolStripMenuItem.Size = New System.Drawing.Size(232, 38)
         Me.CitaEnUnMesToolStripMenuItem.Text = "Cita en un Mes"
@@ -259,6 +287,18 @@ Partial Class frm_agenda
         Me.DesbloquearHorarioToolStripMenuItem.Size = New System.Drawing.Size(232, 38)
         Me.DesbloquearHorarioToolStripMenuItem.Text = "Desbloquear Horario"
         '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(229, 6)
+        '
+        'EliminarHorarioToolStripMenuItem
+        '
+        Me.EliminarHorarioToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.EliminarHorarioToolStripMenuItem.Name = "EliminarHorarioToolStripMenuItem"
+        Me.EliminarHorarioToolStripMenuItem.Size = New System.Drawing.Size(232, 38)
+        Me.EliminarHorarioToolStripMenuItem.Text = "Eliminar Horario"
+        '
         'MedicosBindingSource
         '
         Me.MedicosBindingSource.DataMember = "medicos"
@@ -302,8 +342,8 @@ Partial Class frm_agenda
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1027, 693)
-        Me.SplitContainer1.SplitterDistance = 224
+        Me.SplitContainer1.Size = New System.Drawing.Size(1179, 830)
+        Me.SplitContainer1.SplitterDistance = 254
         Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 4
         '
@@ -334,7 +374,7 @@ Partial Class frm_agenda
         Me.dgvalternas.ReadOnly = True
         Me.dgvalternas.RowHeadersVisible = False
         Me.dgvalternas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvalternas.Size = New System.Drawing.Size(218, 184)
+        Me.dgvalternas.Size = New System.Drawing.Size(218, 321)
         Me.dgvalternas.TabIndex = 6
         '
         'ToolStrip2
@@ -342,10 +382,10 @@ Partial Class frm_agenda
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip2.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2, Me.btn_salie, Me.btn_localizar, Me.btn_bloquear, Me.Btn_desbloqueo, Me.btn_horario})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 654)
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 791)
         Me.ToolStrip2.Name = "ToolStrip2"
         Me.ToolStrip2.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip2.Size = New System.Drawing.Size(224, 39)
+        Me.ToolStrip2.Size = New System.Drawing.Size(254, 39)
         Me.ToolStrip2.TabIndex = 4
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -401,7 +441,7 @@ Partial Class frm_agenda
         'btn_horario
         '
         Me.btn_horario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btn_horario.Image = Global.Agendas.My.Resources.Resources.Time___Date
+        Me.btn_horario.Image = Global.Agendas.My.Resources.Resources.calendario
         Me.btn_horario.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btn_horario.Name = "btn_horario"
         Me.btn_horario.Size = New System.Drawing.Size(36, 36)
@@ -424,8 +464,8 @@ Partial Class frm_agenda
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer6)
         Me.SplitContainer2.Panel2.Controls.Add(Me.PictureBox2)
         Me.SplitContainer2.Panel2.DataBindings.Add(New System.Windows.Forms.Binding("BackColor", Me.MedicosBindingSource, "color", True))
-        Me.SplitContainer2.Size = New System.Drawing.Size(798, 693)
-        Me.SplitContainer2.SplitterDistance = 505
+        Me.SplitContainer2.Size = New System.Drawing.Size(920, 830)
+        Me.SplitContainer2.SplitterDistance = 581
         Me.SplitContainer2.SplitterWidth = 5
         Me.SplitContainer2.TabIndex = 0
         '
@@ -449,7 +489,7 @@ Partial Class frm_agenda
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.SplitContainer4)
-        Me.SplitContainer3.Size = New System.Drawing.Size(505, 693)
+        Me.SplitContainer3.Size = New System.Drawing.Size(581, 830)
         Me.SplitContainer3.SplitterDistance = 85
         Me.SplitContainer3.TabIndex = 3
         '
@@ -459,7 +499,7 @@ Partial Class frm_agenda
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(0, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(505, 40)
+        Me.Label2.Size = New System.Drawing.Size(581, 40)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Label1"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -471,7 +511,7 @@ Partial Class frm_agenda
         Me.NombreLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NombreLabel1.Location = New System.Drawing.Point(0, 0)
         Me.NombreLabel1.Name = "NombreLabel1"
-        Me.NombreLabel1.Size = New System.Drawing.Size(505, 40)
+        Me.NombreLabel1.Size = New System.Drawing.Size(581, 40)
         Me.NombreLabel1.TabIndex = 1
         Me.NombreLabel1.Text = "Label1"
         Me.NombreLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -487,20 +527,51 @@ Partial Class frm_agenda
         '
         'SplitContainer4.Panel1
         '
+        Me.SplitContainer4.Panel1.Controls.Add(Me.StatusStrip1)
         Me.SplitContainer4.Panel1.Controls.Add(Me.dgv)
         Me.SplitContainer4.Panel1.Controls.Add(Me._btn_salir)
         '
         'SplitContainer4.Panel2
         '
         Me.SplitContainer4.Panel2.Controls.Add(Me.SplitContainer5)
-        Me.SplitContainer4.Size = New System.Drawing.Size(505, 604)
-        Me.SplitContainer4.SplitterDistance = 322
+        Me.SplitContainer4.Size = New System.Drawing.Size(581, 741)
+        Me.SplitContainer4.SplitterDistance = 400
         Me.SplitContainer4.TabIndex = 3
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblinfo, Me.infoIco, Me.lblinfopro})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 378)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(581, 22)
+        Me.StatusStrip1.TabIndex = 4
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblinfo
+        '
+        Me.lblinfo.Name = "lblinfo"
+        Me.lblinfo.Size = New System.Drawing.Size(0, 17)
+        '
+        'infoIco
+        '
+        Me.infoIco.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.infoIco.Image = Global.Agendas.My.Resources.Resources.whatsapp
+        Me.infoIco.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.infoIco.Name = "infoIco"
+        Me.infoIco.Size = New System.Drawing.Size(32, 32)
+        Me.infoIco.Text = "ToolStripDropDownButton1"
+        Me.infoIco.Visible = False
+        '
+        'lblinfopro
+        '
+        Me.lblinfopro.Name = "lblinfopro"
+        Me.lblinfopro.Size = New System.Drawing.Size(0, 17)
         '
         '_btn_salir
         '
         Me._btn_salir.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me._btn_salir.Location = New System.Drawing.Point(61, 282)
+        Me._btn_salir.Location = New System.Drawing.Point(57, 251)
         Me._btn_salir.Name = "_btn_salir"
         Me._btn_salir.Size = New System.Drawing.Size(75, 23)
         Me._btn_salir.TabIndex = 3
@@ -527,8 +598,8 @@ Partial Class frm_agenda
         'SplitContainer5.Panel2
         '
         Me.SplitContainer5.Panel2.Controls.Add(Me.ToolStrip1)
-        Me.SplitContainer5.Size = New System.Drawing.Size(505, 278)
-        Me.SplitContainer5.SplitterDistance = 240
+        Me.SplitContainer5.Size = New System.Drawing.Size(581, 337)
+        Me.SplitContainer5.SplitterDistance = 299
         Me.SplitContainer5.TabIndex = 0
         '
         'SplitContainer7
@@ -560,7 +631,7 @@ Partial Class frm_agenda
         Me.SplitContainer7.Panel2.Controls.Add(Me.Label12)
         Me.SplitContainer7.Panel2.Controls.Add(Me.PictureBox3)
         Me.SplitContainer7.Panel2Collapsed = True
-        Me.SplitContainer7.Size = New System.Drawing.Size(505, 240)
+        Me.SplitContainer7.Size = New System.Drawing.Size(581, 299)
         Me.SplitContainer7.SplitterDistance = 371
         Me.SplitContainer7.TabIndex = 3
         '
@@ -568,7 +639,7 @@ Partial Class frm_agenda
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(145, 25)
         Me.Label1.TabIndex = 1
@@ -578,7 +649,7 @@ Partial Class frm_agenda
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(444, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(535, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(46, 42)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -588,15 +659,17 @@ Partial Class frm_agenda
         'Lista_esperaDataGridView
         '
         Me.Lista_esperaDataGridView.AllowUserToAddRows = False
+        Me.Lista_esperaDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Lista_esperaDataGridView.AutoGenerateColumns = False
         Me.Lista_esperaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Lista_esperaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.turno, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.id_usuario, Me.DataGridViewTextBoxColumn5})
         Me.Lista_esperaDataGridView.DataSource = Me.Lista_esperaBindingSource
-        Me.Lista_esperaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Lista_esperaDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.Lista_esperaDataGridView.Location = New System.Drawing.Point(0, 28)
         Me.Lista_esperaDataGridView.Name = "Lista_esperaDataGridView"
         Me.Lista_esperaDataGridView.RowHeadersVisible = False
-        Me.Lista_esperaDataGridView.Size = New System.Drawing.Size(505, 240)
+        Me.Lista_esperaDataGridView.Size = New System.Drawing.Size(581, 271)
         Me.Lista_esperaDataGridView.TabIndex = 2
         '
         'DataGridViewTextBoxColumn1
@@ -738,7 +811,7 @@ Partial Class frm_agenda
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(45, 39)
         Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Seleccione una nueva fecha para la cita. y haga 2 clic en la fecha y hora corresp" & _
+        Me.Label13.Text = "Seleccione una nueva fecha para la cita. y haga 2 clic en la fecha y hora corresp" &
     "ondiente"
         '
         'ctelefono
@@ -872,10 +945,10 @@ Partial Class frm_agenda
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_agregar, Me.boton_cancelar, Me.boton_imprimir, Me.lbl_user})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_agregar, Me.boton_cancelar, Me.boton_imprimir, Me.lbl_user, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(505, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(581, 39)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -948,12 +1021,24 @@ Partial Class frm_agenda
         'SplitContainer6
         '
         Me.SplitContainer6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer6.Location = New System.Drawing.Point(0, 206)
+        Me.SplitContainer6.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
+        Me.SplitContainer6.Location = New System.Drawing.Point(0, 164)
         Me.SplitContainer6.Name = "SplitContainer6"
         Me.SplitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
         'SplitContainer6.Panel1
         '
+        Me.SplitContainer6.Panel1.Controls.Add(Me.btn_nowhats)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.btn_addPersona)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.img_valido)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.img_nuevo)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.Label20)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.nombre)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.Label19)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.materno)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.Label18)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.paterno)
+        Me.SplitContainer6.Panel1.Controls.Add(Me.logo)
         Me.SplitContainer6.Panel1.Controls.Add(Me.img_proxima)
         Me.SplitContainer6.Panel1.Controls.Add(Me.btn_confirmar)
         Me.SplitContainer6.Panel1.Controls.Add(Me.Label6)
@@ -977,9 +1062,123 @@ Partial Class frm_agenda
         Me.SplitContainer6.Panel2.Controls.Add(Me.Label17)
         Me.SplitContainer6.Panel2.Controls.Add(Me.dgvnota)
         Me.SplitContainer6.Panel2.Controls.Add(Me.Linkcitasxcancelar)
-        Me.SplitContainer6.Size = New System.Drawing.Size(288, 487)
-        Me.SplitContainer6.SplitterDistance = 353
+        Me.SplitContainer6.Size = New System.Drawing.Size(334, 666)
+        Me.SplitContainer6.SplitterDistance = 449
         Me.SplitContainer6.TabIndex = 5
+        '
+        'btn_nowhats
+        '
+        Me.btn_nowhats.BackgroundImage = Global.Agendas.My.Resources.Resources.nowhatsapp1
+        Me.btn_nowhats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_nowhats.Location = New System.Drawing.Point(241, 110)
+        Me.btn_nowhats.Name = "btn_nowhats"
+        Me.btn_nowhats.Size = New System.Drawing.Size(29, 24)
+        Me.btn_nowhats.TabIndex = 30
+        Me.ToolTip1.SetToolTip(Me.btn_nowhats, "Agregar otra persona a este numero.")
+        Me.btn_nowhats.UseVisualStyleBackColor = True
+        '
+        'btn_addPersona
+        '
+        Me.btn_addPersona.BackgroundImage = Global.Agendas.My.Resources.Resources.notification_add
+        Me.btn_addPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_addPersona.Location = New System.Drawing.Point(212, 110)
+        Me.btn_addPersona.Name = "btn_addPersona"
+        Me.btn_addPersona.Size = New System.Drawing.Size(23, 23)
+        Me.btn_addPersona.TabIndex = 29
+        Me.ToolTip1.SetToolTip(Me.btn_addPersona, "Agregar otra persona a este numero.")
+        Me.btn_addPersona.UseVisualStyleBackColor = True
+        '
+        'img_valido
+        '
+        Me.img_valido.Image = Global.Agendas.My.Resources.Resources.notification_done
+        Me.img_valido.Location = New System.Drawing.Point(185, 110)
+        Me.img_valido.Name = "img_valido"
+        Me.img_valido.Size = New System.Drawing.Size(21, 23)
+        Me.img_valido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.img_valido.TabIndex = 27
+        Me.img_valido.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.img_valido, "Numero nuevo, se agregara a la base de datos,")
+        Me.img_valido.Visible = False
+        '
+        'img_nuevo
+        '
+        Me.img_nuevo.Image = Global.Agendas.My.Resources.Resources.notification_add
+        Me.img_nuevo.Location = New System.Drawing.Point(185, 110)
+        Me.img_nuevo.Name = "img_nuevo"
+        Me.img_nuevo.Size = New System.Drawing.Size(21, 23)
+        Me.img_nuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.img_nuevo.TabIndex = 26
+        Me.img_nuevo.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.img_nuevo, "Numero nuevo, se agregara a la base de datos,")
+        Me.img_nuevo.Visible = False
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(13, 197)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(58, 15)
+        Me.Label20.TabIndex = 25
+        Me.Label20.Text = "Nombre :"
+        '
+        'nombre
+        '
+        Me.nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.nombre.Enabled = False
+        Me.nombre.Location = New System.Drawing.Point(79, 194)
+        Me.nombre.Name = "nombre"
+        Me.nombre.Size = New System.Drawing.Size(194, 21)
+        Me.nombre.TabIndex = 7
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(12, 170)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(59, 15)
+        Me.Label19.TabIndex = 23
+        Me.Label19.Text = "Materno :"
+        '
+        'materno
+        '
+        Me.materno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.materno.Enabled = False
+        Me.materno.Location = New System.Drawing.Point(78, 167)
+        Me.materno.MaxLength = 30
+        Me.materno.Name = "materno"
+        Me.materno.Size = New System.Drawing.Size(194, 21)
+        Me.materno.TabIndex = 6
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(12, 142)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(56, 15)
+        Me.Label18.TabIndex = 21
+        Me.Label18.Text = "Paterno :"
+        '
+        'paterno
+        '
+        Me.paterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.paterno.Enabled = False
+        Me.paterno.Location = New System.Drawing.Point(78, 139)
+        Me.paterno.MaxLength = 30
+        Me.paterno.Name = "paterno"
+        Me.paterno.Size = New System.Drawing.Size(194, 21)
+        Me.paterno.TabIndex = 5
+        '
+        'logo
+        '
+        Me.logo.Image = Global.Agendas.My.Resources.Resources.whatsapp
+        Me.logo.Location = New System.Drawing.Point(17, 382)
+        Me.logo.Name = "logo"
+        Me.logo.Size = New System.Drawing.Size(23, 25)
+        Me.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.logo.TabIndex = 19
+        Me.logo.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.logo, "Se mandara un mensaje de confirmacion.")
+        Me.logo.Visible = False
         '
         'img_proxima
         '
@@ -995,10 +1194,10 @@ Partial Class frm_agenda
         '
         'btn_confirmar
         '
-        Me.btn_confirmar.Location = New System.Drawing.Point(197, 306)
+        Me.btn_confirmar.Location = New System.Drawing.Point(279, 353)
         Me.btn_confirmar.Name = "btn_confirmar"
         Me.btn_confirmar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_confirmar.TabIndex = 16
+        Me.btn_confirmar.TabIndex = 11
         Me.btn_confirmar.Text = "Confirmar"
         Me.btn_confirmar.UseVisualStyleBackColor = True
         '
@@ -1027,7 +1226,7 @@ Partial Class frm_agenda
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(18, 228)
+        Me.Label9.Location = New System.Drawing.Point(18, 304)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(77, 15)
         Me.Label9.TabIndex = 13
@@ -1035,16 +1234,16 @@ Partial Class frm_agenda
         '
         'txtcomentarios
         '
-        Me.txtcomentarios.Location = New System.Drawing.Point(15, 246)
+        Me.txtcomentarios.Location = New System.Drawing.Point(15, 322)
         Me.txtcomentarios.Multiline = True
         Me.txtcomentarios.Name = "txtcomentarios"
         Me.txtcomentarios.Size = New System.Drawing.Size(258, 54)
-        Me.txtcomentarios.TabIndex = 12
+        Me.txtcomentarios.TabIndex = 10
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 119)
+        Me.Label7.Location = New System.Drawing.Point(14, 223)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(58, 15)
         Me.Label7.TabIndex = 10
@@ -1053,7 +1252,7 @@ Partial Class frm_agenda
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(23, 198)
+        Me.Label5.Location = New System.Drawing.Point(23, 274)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 15)
         Me.Label5.TabIndex = 8
@@ -1062,7 +1261,7 @@ Partial Class frm_agenda
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(19, 168)
+        Me.Label4.Location = New System.Drawing.Point(19, 118)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(52, 15)
         Me.Label4.TabIndex = 7
@@ -1071,7 +1270,7 @@ Partial Class frm_agenda
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(10, 144)
+        Me.Label3.Location = New System.Drawing.Point(11, 248)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 15)
         Me.Label3.TabIndex = 6
@@ -1079,32 +1278,34 @@ Partial Class frm_agenda
         '
         'txtmail
         '
-        Me.txtmail.Location = New System.Drawing.Point(79, 198)
+        Me.txtmail.Location = New System.Drawing.Point(79, 274)
         Me.txtmail.Name = "txtmail"
         Me.txtmail.Size = New System.Drawing.Size(194, 21)
-        Me.txtmail.TabIndex = 5
+        Me.txtmail.TabIndex = 9
         '
         'txtcelular
         '
-        Me.txtcelular.Location = New System.Drawing.Point(79, 168)
+        Me.txtcelular.Location = New System.Drawing.Point(79, 112)
         Me.txtcelular.Name = "txtcelular"
         Me.txtcelular.Size = New System.Drawing.Size(100, 21)
         Me.txtcelular.TabIndex = 4
         '
         'txttelefono
         '
-        Me.txttelefono.Location = New System.Drawing.Point(79, 144)
+        Me.txttelefono.Location = New System.Drawing.Point(80, 248)
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(100, 21)
-        Me.txttelefono.TabIndex = 3
+        Me.txttelefono.TabIndex = 8
         '
         'txtnombre
         '
         Me.txtnombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtnombre.Location = New System.Drawing.Point(79, 116)
+        Me.txtnombre.Enabled = False
+        Me.txtnombre.Location = New System.Drawing.Point(80, 220)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(194, 21)
         Me.txtnombre.TabIndex = 2
+        Me.txtnombre.TabStop = False
         '
         'txtfecha
         '
@@ -1118,28 +1319,18 @@ Partial Class frm_agenda
         '
         'lblfestivos
         '
-        Me.lblfestivos.AutoSize = True
-        Me.lblfestivos.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DiasfestivosBindingSource, "descripcion", True))
-        Me.lblfestivos.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.lblfestivos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblfestivos.Location = New System.Drawing.Point(0, 112)
+        Me.lblfestivos.Location = New System.Drawing.Point(182, 10)
         Me.lblfestivos.Name = "lblfestivos"
-        Me.lblfestivos.Size = New System.Drawing.Size(13, 18)
-        Me.lblfestivos.TabIndex = 5
-        Me.lblfestivos.Text = "-"
-        '
-        'DiasfestivosBindingSource
-        '
-        Me.DiasfestivosBindingSource.DataMember = "dias_festivos"
-        Me.DiasfestivosBindingSource.DataSource = Me.Db_baseDataSet
+        Me.lblfestivos.Size = New System.Drawing.Size(100, 23)
+        Me.lblfestivos.TabIndex = 0
         '
         'btn_crear_nota
         '
         Me.btn_crear_nota.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_crear_nota.Location = New System.Drawing.Point(8, -123)
+        Me.btn_crear_nota.Location = New System.Drawing.Point(8, 184)
         Me.btn_crear_nota.Name = "btn_crear_nota"
-        Me.btn_crear_nota.Size = New System.Drawing.Size(239, 23)
+        Me.btn_crear_nota.Size = New System.Drawing.Size(314, 25)
         Me.btn_crear_nota.TabIndex = 4
         Me.btn_crear_nota.Text = "Ediatr"
         Me.btn_crear_nota.UseVisualStyleBackColor = True
@@ -1168,20 +1359,20 @@ Partial Class frm_agenda
         Me.dgvnota.ColumnHeadersVisible = False
         Me.dgvnota.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NotaDataGridViewTextBoxColumn})
         Me.dgvnota.DataSource = Me.NotasBindingSource
-        Me.dgvnota.Location = New System.Drawing.Point(8, 62)
+        Me.dgvnota.Location = New System.Drawing.Point(8, 60)
         Me.dgvnota.Name = "dgvnota"
         Me.dgvnota.ReadOnly = True
         Me.dgvnota.RowHeadersVisible = False
-        Me.dgvnota.Size = New System.Drawing.Size(239, 0)
+        Me.dgvnota.Size = New System.Drawing.Size(314, 119)
         Me.dgvnota.TabIndex = 1
         '
         'NotaDataGridViewTextBoxColumn
         '
         Me.NotaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NotaDataGridViewTextBoxColumn.DataPropertyName = "nota"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.NotaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.NotaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.NotaDataGridViewTextBoxColumn.HeaderText = ""
         Me.NotaDataGridViewTextBoxColumn.Name = "NotaDataGridViewTextBoxColumn"
         Me.NotaDataGridViewTextBoxColumn.ReadOnly = True
@@ -1210,7 +1401,7 @@ Partial Class frm_agenda
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(288, 206)
+        Me.PictureBox2.Size = New System.Drawing.Size(334, 164)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
@@ -1224,22 +1415,6 @@ Partial Class frm_agenda
         '
         Me.MedicosTableAdapter.ClearBeforeFill = True
         '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
-        Me.TableAdapterManager.citasTableAdapter = Nothing
-        Me.TableAdapterManager.dias_festivosTableAdapter = Nothing
-        Me.TableAdapterManager.EsquemaTableAdapter = Nothing
-        Me.TableAdapterManager.lista_esperaTableAdapter = Me.Lista_esperaTableAdapter
-        Me.TableAdapterManager.medicosTableAdapter = Me.MedicosTableAdapter
-        Me.TableAdapterManager.notasTableAdapter = Nothing
-        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_generalesTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
-        Me.TableAdapterManager.to_doTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'Lista_esperaTableAdapter
         '
         Me.Lista_esperaTableAdapter.ClearBeforeFill = True
@@ -1248,16 +1423,37 @@ Partial Class frm_agenda
         '
         Me.NotasTableAdapter.ClearBeforeFill = True
         '
-        'Dias_festivosTableAdapter
+        'TableAdapterManager
         '
-        Me.Dias_festivosTableAdapter.ClearBeforeFill = True
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
+        Me.TableAdapterManager.citasTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EsquemaTableAdapter = Nothing
+        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
+        Me.TableAdapterManager.medicosTableAdapter = Nothing
+        Me.TableAdapterManager.notasTableAdapter = Nothing
+        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_directorioTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
+        Me.TableAdapterManager.to_doTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'frm_agenda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me._btn_salir
-        Me.ClientSize = New System.Drawing.Size(1027, 693)
+        Me.ClientSize = New System.Drawing.Size(1179, 830)
         Me.ControlBox = False
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.Button1)
@@ -1273,27 +1469,36 @@ Partial Class frm_agenda
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.dgvalternas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
         Me.SplitContainer4.Panel1.ResumeLayout(False)
+        Me.SplitContainer4.Panel1.PerformLayout()
         Me.SplitContainer4.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer4.ResumeLayout(False)
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.SplitContainer5.Panel1.ResumeLayout(False)
         Me.SplitContainer5.Panel2.ResumeLayout(False)
         Me.SplitContainer5.Panel2.PerformLayout()
+        CType(Me.SplitContainer5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer5.ResumeLayout(False)
         Me.SplitContainer7.Panel1.ResumeLayout(False)
         Me.SplitContainer7.Panel1.PerformLayout()
         Me.SplitContainer7.Panel2.ResumeLayout(False)
         Me.SplitContainer7.Panel2.PerformLayout()
+        CType(Me.SplitContainer7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer7.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Lista_esperaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1307,9 +1512,12 @@ Partial Class frm_agenda
         Me.SplitContainer6.Panel1.PerformLayout()
         Me.SplitContainer6.Panel2.ResumeLayout(False)
         Me.SplitContainer6.Panel2.PerformLayout()
+        CType(Me.SplitContainer6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer6.ResumeLayout(False)
+        CType(Me.img_valido, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.img_nuevo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.img_proxima, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DiasfestivosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvnota, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1358,9 +1566,6 @@ Partial Class frm_agenda
     Friend WithEvents EditarCitaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents img_proxima As System.Windows.Forms.PictureBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents boton_cancelar As System.Windows.Forms.ToolStripButton
-    Friend WithEvents lbl_user As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Lista_esperaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Lista_esperaTableAdapter As Agendas.db_baseDataSetTableAdapters.lista_esperaTableAdapter
     Friend WithEvents Lista_esperaDataGridView As System.Windows.Forms.DataGridView
@@ -1402,12 +1607,6 @@ Partial Class frm_agenda
     Friend WithEvents btn_crear_nota As System.Windows.Forms.Button
     Friend WithEvents NotaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lblfestivos As System.Windows.Forms.Label
-    Friend WithEvents DiasfestivosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Dias_festivosTableAdapter As Agendas.db_baseDataSetTableAdapters.dias_festivosTableAdapter
-    Friend WithEvents boton_imprimir As System.Windows.Forms.ToolStripSplitButton
-    Friend WithEvents btn_mañana As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents btn_tarde As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents btn_completa As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents turno As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1415,8 +1614,33 @@ Partial Class frm_agenda
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents id_usuario As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents menu_agregar As System.Windows.Forms.ToolStripSplitButton
-    Friend WithEvents btn_manana As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents boton_tarde As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DesbloquearHorarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents EliminarHorarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents logo As PictureBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents nombre As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents materno As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents paterno As TextBox
+    Friend WithEvents img_nuevo As PictureBox
+    Friend WithEvents img_valido As PictureBox
+    Friend WithEvents btn_addPersona As Button
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents lblinfo As ToolStripStatusLabel
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents menu_agregar As ToolStripSplitButton
+    Friend WithEvents btn_manana As ToolStripMenuItem
+    Friend WithEvents boton_tarde As ToolStripMenuItem
+    Friend WithEvents boton_cancelar As ToolStripButton
+    Friend WithEvents boton_imprimir As ToolStripSplitButton
+    Friend WithEvents btn_mañana As ToolStripMenuItem
+    Friend WithEvents btn_tarde As ToolStripMenuItem
+    Friend WithEvents btn_completa As ToolStripMenuItem
+    Friend WithEvents lbl_user As ToolStripLabel
+    Friend WithEvents infoIco As ToolStripStatusLabel
+    Friend WithEvents btn_nowhats As Button
+    Friend WithEvents lblinfopro As ToolStripStatusLabel
+    Friend WithEvents ToolStripButton1 As ToolStripButton
 End Class

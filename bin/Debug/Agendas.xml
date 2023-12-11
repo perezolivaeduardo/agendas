@@ -1,0 +1,441 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Agendas
+</name>
+</assembly>
+<members>
+<member name="T:Agendas.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Backgammon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.calendario">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.citas_medicas">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Decrypted">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Download_5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Encrypted">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Error_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Firewall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Index">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.lista">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Log_Off">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.logo_verde_chico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.logo_verde_mediano">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.minilogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.notification_add">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.notification_done">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.nowhatsapp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.nowhatsapp1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Printer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Restart">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Search_Engine">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.sync">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Vista_Search">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Vista_Users">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.whatsapp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Agendas.My.Resources.Resources.Windows_Calendar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.citasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.medicosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.tbl_usuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.EsquemaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.citas_disponiblesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.lista_esperaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.sql_citasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.bitacoraDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.sql_bitacoraDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.notasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.to_doDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.tbl_directorioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.citasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.medicosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.tbl_usuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.EsquemaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.citas_disponiblesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.lista_esperaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.sql_citasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.bitacoraRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.sql_bitacoraRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.notasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.to_doRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.tbl_directorioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.citasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.medicosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.tbl_usuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.EsquemaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.citas_disponiblesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.lista_esperaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.sql_citasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.bitacoraRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.sql_bitacoraRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.notasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.to_doRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSet.tbl_directorioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.citasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.medicosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.tbl_usuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.EsquemaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.citas_disponiblesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.lista_esperaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.sql_citasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.bitacoraTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.sql_bitacoraTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.notasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.to_doTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.tbl_directorioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Agendas.db_baseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Agendas.db_baseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Agendas.db_baseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateAll(Agendas.db_baseDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Agendas.db_baseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

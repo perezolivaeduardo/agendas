@@ -26,6 +26,7 @@ Partial Class horario
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.chksoloundia = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,10 +69,20 @@ Partial Class horario
         Me.DateTimePicker1.CustomFormat = "hh:mm tt"
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(35, 24)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(34, 12)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(115, 30)
         Me.DateTimePicker1.TabIndex = 1
+        '
+        'chksoloundia
+        '
+        Me.chksoloundia.AutoSize = True
+        Me.chksoloundia.Location = New System.Drawing.Point(34, 48)
+        Me.chksoloundia.Name = "chksoloundia"
+        Me.chksoloundia.Size = New System.Drawing.Size(101, 17)
+        Me.chksoloundia.TabIndex = 2
+        Me.chksoloundia.Text = "Solo un evento."
+        Me.chksoloundia.UseVisualStyleBackColor = True
         '
         'horario
         '
@@ -80,6 +91,7 @@ Partial Class horario
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(176, 122)
+        Me.Controls.Add(Me.chksoloundia)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -91,11 +103,12 @@ Partial Class horario
         Me.Text = "Crear Horario"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents OK_Button As System.Windows.Forms.Button
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-
+    Friend WithEvents chksoloundia As CheckBox
 End Class

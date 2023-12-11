@@ -114,18 +114,19 @@
         avance.Maximum = ndias + 2
         avance.Value = 1
         Dim id_medico As Integer = NombreComboBox.SelectedValue
-        Dim tbl As DataTable = leer_tabla("select * from esquema where id_medico =" + id_medico.ToString)
+        Dim Esquema As DataTable = leer_tabla("select * from esquema where id_medico =" + id_medico.ToString)
         While fecha <= ff
             Dim dia As Integer = fecha.DayOfWeek, horacita As TimeSpan
-            If dia = 0 Then dia = 6
-            For j As Integer = 0 To tbl.Rows.Count - 1
-                If tbl.Rows(j).Item(dia + 1) = True Then
-                    horacita = tbl.Rows(j).Item(1)
+            If dia = 0 Then dia = 7
+
+            For j As Integer = 0 To Esquema.Rows.Count - 1
+                If Esquema.Rows(j).Item(dia + 1) = True Then
+                    horacita = Esquema.Rows(j).Item(1)
                     fecha_cita = fecha.ToShortDateString + " " + horacita.Duration.ToString
                     Try
                         adap.Insert(id_medico, fecha_cita, "", "", "", "", "", 0, False, 0)
                     Catch ex As Exception
-
+                        'MsgBox(ex.Message)
                     End Try
                 End If
             Next j
@@ -180,7 +181,7 @@
 
     Private Sub ToolStripButton5_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripButton5.Click
         Dim msg As String
-        msg = "Dia 1=lun, 2=mar, 3=mie, 4=Jue, 5=Vie, 6=sabado, 7=Dom."
+        msg = "Dia  1=Dom, 2=lun, 3=mar, 4=mie, 5=Jue, 6=Vie, 7=sabado"
         Dim dia As Integer = InputBox(msg, "Eliminar un dia de la semana", "7")
         If dia > 7 Then Exit Sub
         If dia <> 7 Then
@@ -198,5 +199,17 @@
         My.Forms.eliminar_diayhora.Show()
         My.Forms.eliminar_diayhora.id_medico.Text = id
 
+    End Sub
+
+    Private Sub SplitContainer3_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel1.Paint
+
+    End Sub
+
+    Private Sub EsquemaDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles EsquemaDataGridView.DataError
+        Try
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

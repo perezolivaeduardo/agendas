@@ -19,14 +19,12 @@
         
         If user_nivel.ToString < 1 Then ToolStrip1.Visible = False
         Me.Top = 1 : Me.Left = 0
-        Me.Height = 750
+        Me.Height = 550
         carga_lista()
-        Me.Text = "Agendas Electronicas V.3.0"
+        Me.Text = "Agenda Electronica V.4.0"
     End Sub
 
-    Private Sub DatosGeneralesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DatosGeneralesToolStripMenuItem.Click
-        My.Forms.cfg_generales.ShowDialog()
-    End Sub
+
 
     Private Sub MEDICOSToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MEDICOSToolStripMenuItem.Click
         My.Forms.catalogo_medicos.Show()
@@ -36,7 +34,6 @@
         My.Forms.crear_agendas.Show()
     End Sub
 
-   
     Private Sub dgvm_CellClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvm.CellClick
         Dim id As Integer, fecha As Date
         id = dgvm.CurrentRow.Cells(0).Value
@@ -48,11 +45,6 @@
 
     Private Sub UsuariosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UsuariosToolStripMenuItem.Click
         My.Forms.usuarios.Show()
-    End Sub
-
-    Private Sub PruebasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PruebasToolStripMenuItem.Click
-        My.Forms.pruebas.Show()
-
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripButton2.Click
@@ -83,15 +75,40 @@
         My.Forms.localizar.ShowDialog()
     End Sub
 
-    Private Sub ToolStrip1_ItemClicked(sender As System.Object, e As System.Windows.Forms.ToolStripItemClickedEventArgs)
 
-    End Sub
 
     Private Sub BTN_BITACORA_Click(sender As System.Object, e As System.EventArgs) Handles BTN_BITACORA.Click
         My.Forms.bitacora.ShowDialog()
     End Sub
 
-    Private Sub ToolStrip1_ItemClicked_1(sender As System.Object, e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
 
+
+    Private Sub ConfigurarAgendaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConfigurarAgendaToolStripMenuItem.Click
+        Dim id As Integer, fecha As Date
+        id = dgvm.CurrentRow.Cells(0).Value
+        fecha = dgvm.CurrentRow.Cells(2).Value
+        Dim frmModela As New Configurar_Agenda
+        frmModela.Cargar(id)
+        frmModela.Show()
+    End Sub
+
+    Private Sub PruebasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebasToolStripMenuItem.Click
+        Process.Start(fileini)
+    End Sub
+
+    Private Sub InfToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InfToolStripMenuItem.Click
+        AboutBox1.ShowDialog()
+    End Sub
+
+    Private Sub TestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem.Click
+        My.Forms.test.Show()
+    End Sub
+
+    Private Sub ToolStripButton1_ButtonClick(sender As Object, e As EventArgs) Handles ToolStripButton1.ButtonClick
+
+    End Sub
+
+    Private Sub Menu_Directorio_Click(sender As Object, e As EventArgs) Handles Menu_Directorio.Click
+        My.Forms.directorio.ShowDialog()
     End Sub
 End Class

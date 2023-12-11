@@ -289,7 +289,6 @@ Partial Class catalogo_medicos
         Me.TableAdapterManager.citasTableAdapter = Nothing
         Me.TableAdapterManager.EsquemaTableAdapter = Nothing
         Me.TableAdapterManager.medicosTableAdapter = Me.MedicosTableAdapter
-        Me.TableAdapterManager.tbl_generalesTableAdapter = Nothing
         Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

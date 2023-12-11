@@ -26,8 +26,7 @@ Partial Class crear_agendas
         Dim NombreLabel As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(crear_agendas))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -65,6 +64,10 @@ Partial Class crear_agendas
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.avance = New System.Windows.Forms.ToolStripProgressBar()
         Me.EsquemaDataGridView = New System.Windows.Forms.DataGridView()
+        Me.EsquemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EsquemaTableAdapter = New Agendas.db_baseDataSetTableAdapters.EsquemaTableAdapter()
+        Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
+        Me.MedicosTableAdapter = New Agendas.db_baseDataSetTableAdapters.medicosTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -73,21 +76,20 @@ Partial Class crear_agendas
         Me.DataGridViewCheckBoxColumn5 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewCheckBoxColumn6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewCheckBoxColumn7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.EsquemaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EsquemaTableAdapter = New Agendas.db_baseDataSetTableAdapters.EsquemaTableAdapter()
-        Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
-        Me.MedicosTableAdapter = New Agendas.db_baseDataSetTableAdapters.medicosTableAdapter()
         NombreLabel = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
@@ -137,7 +139,7 @@ Partial Class crear_agendas
         Me.SplitContainer1.Panel2.AutoScroll = True
         Me.SplitContainer1.Panel2.Controls.Add(Me.StatusStrip1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.EsquemaDataGridView)
-        Me.SplitContainer1.Size = New System.Drawing.Size(758, 472)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1253, 472)
         Me.SplitContainer1.SplitterDistance = 194
         Me.SplitContainer1.TabIndex = 0
         '
@@ -157,7 +159,7 @@ Partial Class crear_agendas
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer3.Size = New System.Drawing.Size(758, 194)
+        Me.SplitContainer3.Size = New System.Drawing.Size(1253, 194)
         Me.SplitContainer3.SplitterDistance = 75
         Me.SplitContainer3.TabIndex = 19
         '
@@ -167,7 +169,7 @@ Partial Class crear_agendas
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripButton6})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(758, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1253, 39)
         Me.ToolStrip1.TabIndex = 13
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -271,8 +273,8 @@ Partial Class crear_agendas
         Me.SplitContainer2.Panel2.Controls.Add(Me.fechainicial)
         Me.SplitContainer2.Panel2.Controls.Add(Me.Label5)
         Me.SplitContainer2.Panel2.Controls.Add(Me.fechafinal)
-        Me.SplitContainer2.Size = New System.Drawing.Size(758, 115)
-        Me.SplitContainer2.SplitterDistance = 564
+        Me.SplitContainer2.Size = New System.Drawing.Size(1253, 115)
+        Me.SplitContainer2.SplitterDistance = 554
         Me.SplitContainer2.TabIndex = 18
         '
         'Label1
@@ -390,7 +392,7 @@ Partial Class crear_agendas
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(391, 115)
+        Me.Panel1.Size = New System.Drawing.Size(269, 115)
         Me.Panel1.TabIndex = 21
         '
         'cal
@@ -442,7 +444,7 @@ Partial Class crear_agendas
         'btn_genera
         '
         Me.btn_genera.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_genera.Location = New System.Drawing.Point(43, 75)
+        Me.btn_genera.Location = New System.Drawing.Point(548, 75)
         Me.btn_genera.Name = "btn_genera"
         Me.btn_genera.Size = New System.Drawing.Size(120, 23)
         Me.btn_genera.TabIndex = 13
@@ -498,7 +500,7 @@ Partial Class crear_agendas
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.avance})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 252)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(758, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1253, 22)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -510,10 +512,10 @@ Partial Class crear_agendas
         'EsquemaDataGridView
         '
         Me.EsquemaDataGridView.AllowUserToAddRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.EsquemaDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.EsquemaDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.EsquemaDataGridView.AutoGenerateColumns = False
         Me.EsquemaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.EsquemaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -523,14 +525,40 @@ Partial Class crear_agendas
         Me.EsquemaDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.EsquemaDataGridView.Name = "EsquemaDataGridView"
         Me.EsquemaDataGridView.RowHeadersVisible = False
-        Me.EsquemaDataGridView.Size = New System.Drawing.Size(758, 274)
+        Me.EsquemaDataGridView.Size = New System.Drawing.Size(1253, 274)
         Me.EsquemaDataGridView.TabIndex = 0
+        '
+        'EsquemaBindingSource
+        '
+        Me.EsquemaBindingSource.DataMember = "Esquema"
+        Me.EsquemaBindingSource.DataSource = Me.Db_baseDataSet
+        '
+        'EsquemaTableAdapter
+        '
+        Me.EsquemaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
+        Me.TableAdapterManager.citasTableAdapter = Nothing
+        Me.TableAdapterManager.EsquemaTableAdapter = Me.EsquemaTableAdapter
+        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
+        Me.TableAdapterManager.medicosTableAdapter = Me.MedicosTableAdapter
+        Me.TableAdapterManager.notasTableAdapter = Nothing
+        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_directorioTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
+        Me.TableAdapterManager.to_doTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'MedicosTableAdapter
+        '
+        Me.MedicosTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "hora"
-        DataGridViewCellStyle4.Format = "HH:mm"
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn1.HeaderText = "hora"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
@@ -576,40 +604,11 @@ Partial Class crear_agendas
         Me.DataGridViewCheckBoxColumn7.HeaderText = "Dom"
         Me.DataGridViewCheckBoxColumn7.Name = "DataGridViewCheckBoxColumn7"
         '
-        'EsquemaBindingSource
-        '
-        Me.EsquemaBindingSource.DataMember = "Esquema"
-        Me.EsquemaBindingSource.DataSource = Me.Db_baseDataSet
-        '
-        'EsquemaTableAdapter
-        '
-        Me.EsquemaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
-        Me.TableAdapterManager.citasTableAdapter = Nothing
-        Me.TableAdapterManager.dias_festivosTableAdapter = Nothing
-        Me.TableAdapterManager.EsquemaTableAdapter = Me.EsquemaTableAdapter
-        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
-        Me.TableAdapterManager.medicosTableAdapter = Me.MedicosTableAdapter
-        Me.TableAdapterManager.notasTableAdapter = Nothing
-        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_generalesTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
-        Me.TableAdapterManager.to_doTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'MedicosTableAdapter
-        '
-        Me.MedicosTableAdapter.ClearBeforeFill = True
-        '
         'crear_agendas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(758, 472)
+        Me.ClientSize = New System.Drawing.Size(1253, 472)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "crear_agendas"
         Me.Text = "Crear una Agenda Nueva"
@@ -617,10 +616,12 @@ Partial Class crear_agendas
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         Me.SplitContainer1.Panel2.PerformLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.PerformLayout()
         Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
@@ -630,6 +631,7 @@ Partial Class crear_agendas
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.Panel2.PerformLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         CType(Me.intervalo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -659,14 +661,6 @@ Partial Class crear_agendas
     Friend WithEvents EsquemaDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents EsquemaTableAdapter As Agendas.db_baseDataSetTableAdapters.EsquemaTableAdapter
     Friend WithEvents btn_reset As System.Windows.Forms.Button
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn2 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn3 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn4 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn5 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn6 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn7 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents btn_genera As System.Windows.Forms.Button
     Friend WithEvents fechainicial As System.Windows.Forms.DateTimePicker
     Friend WithEvents fechafinal As System.Windows.Forms.DateTimePicker
@@ -690,4 +684,12 @@ Partial Class crear_agendas
     Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn4 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn5 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn6 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn7 As DataGridViewCheckBoxColumn
 End Class
