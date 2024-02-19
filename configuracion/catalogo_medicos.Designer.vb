@@ -30,6 +30,18 @@ Partial Class catalogo_medicos
         Dim ColorLabel As System.Windows.Forms.Label
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.MedicosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btn_foto = New System.Windows.Forms.Button()
+        Me.ImgFoto = New System.Windows.Forms.PictureBox()
+        Me.btn_color = New System.Windows.Forms.Button()
+        Me.Id_medicoTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.CelTextBox = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.ColorTextBox = New System.Windows.Forms.TextBox()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,33 +51,26 @@ Partial Class catalogo_medicos
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.MedicosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_baseDataSet = New Agendas.db_baseDataSet()
-        Me.btn_color = New System.Windows.Forms.Button()
-        Me.Id_medicoTextBox = New System.Windows.Forms.TextBox()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
-        Me.CelTextBox = New System.Windows.Forms.TextBox()
-        Me.EmailTextBox = New System.Windows.Forms.TextBox()
-        Me.ColorTextBox = New System.Windows.Forms.TextBox()
         Me.MedicosTableAdapter = New Agendas.db_baseDataSetTableAdapters.medicosTableAdapter()
         Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Id_medicoLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CelLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
         ColorLabel = New System.Windows.Forms.Label()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.MedicosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImgFoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_medicoLabel
@@ -131,6 +136,8 @@ Partial Class catalogo_medicos
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btn_foto)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.ImgFoto)
         Me.SplitContainer1.Panel2.Controls.Add(Me.btn_color)
         Me.SplitContainer1.Panel2.Controls.Add(Id_medicoLabel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Id_medicoTextBox)
@@ -142,8 +149,8 @@ Partial Class catalogo_medicos
         Me.SplitContainer1.Panel2.Controls.Add(Me.EmailTextBox)
         Me.SplitContainer1.Panel2.Controls.Add(ColorLabel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.ColorTextBox)
-        Me.SplitContainer1.Size = New System.Drawing.Size(761, 271)
-        Me.SplitContainer1.SplitterDistance = 380
+        Me.SplitContainer1.Size = New System.Drawing.Size(789, 302)
+        Me.SplitContainer1.SplitterDistance = 393
         Me.SplitContainer1.TabIndex = 0
         '
         'MedicosDataGridView
@@ -157,8 +164,120 @@ Partial Class catalogo_medicos
         Me.MedicosDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.MedicosDataGridView.Name = "MedicosDataGridView"
         Me.MedicosDataGridView.RowHeadersVisible = False
-        Me.MedicosDataGridView.Size = New System.Drawing.Size(380, 271)
+        Me.MedicosDataGridView.Size = New System.Drawing.Size(393, 302)
         Me.MedicosDataGridView.TabIndex = 0
+        '
+        'btn_foto
+        '
+        Me.btn_foto.Location = New System.Drawing.Point(232, 245)
+        Me.btn_foto.Name = "btn_foto"
+        Me.btn_foto.Size = New System.Drawing.Size(93, 27)
+        Me.btn_foto.TabIndex = 14
+        Me.btn_foto.Text = "Button1"
+        Me.btn_foto.UseVisualStyleBackColor = True
+        '
+        'ImgFoto
+        '
+        Me.ImgFoto.Image = Global.Agendas.My.Resources.Resources.icon_doctor
+        Me.ImgFoto.Location = New System.Drawing.Point(232, 141)
+        Me.ImgFoto.Name = "ImgFoto"
+        Me.ImgFoto.Size = New System.Drawing.Size(93, 104)
+        Me.ImgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ImgFoto.TabIndex = 13
+        Me.ImgFoto.TabStop = False
+        '
+        'btn_color
+        '
+        Me.btn_color.Location = New System.Drawing.Point(181, 138)
+        Me.btn_color.Name = "btn_color"
+        Me.btn_color.Size = New System.Drawing.Size(33, 23)
+        Me.btn_color.TabIndex = 12
+        Me.btn_color.Text = "..."
+        Me.btn_color.UseVisualStyleBackColor = True
+        '
+        'Id_medicoTextBox
+        '
+        Me.Id_medicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "id_medico", True))
+        Me.Id_medicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Id_medicoTextBox.Location = New System.Drawing.Point(263, 10)
+        Me.Id_medicoTextBox.Name = "Id_medicoTextBox"
+        Me.Id_medicoTextBox.ReadOnly = True
+        Me.Id_medicoTextBox.Size = New System.Drawing.Size(60, 26)
+        Me.Id_medicoTextBox.TabIndex = 1
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "Nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreTextBox.Location = New System.Drawing.Point(14, 39)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(311, 26)
+        Me.NombreTextBox.TabIndex = 3
+        '
+        'CelTextBox
+        '
+        Me.CelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "cel", True))
+        Me.CelTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CelTextBox.Location = New System.Drawing.Point(75, 71)
+        Me.CelTextBox.Name = "CelTextBox"
+        Me.CelTextBox.Size = New System.Drawing.Size(249, 26)
+        Me.CelTextBox.TabIndex = 5
+        '
+        'EmailTextBox
+        '
+        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "email", True))
+        Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmailTextBox.Location = New System.Drawing.Point(75, 103)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(248, 26)
+        Me.EmailTextBox.TabIndex = 7
+        '
+        'ColorTextBox
+        '
+        Me.ColorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "color", True))
+        Me.ColorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ColorTextBox.Location = New System.Drawing.Point(75, 135)
+        Me.ColorTextBox.Name = "ColorTextBox"
+        Me.ColorTextBox.Size = New System.Drawing.Size(100, 26)
+        Me.ColorTextBox.TabIndex = 11
+        '
+        'SplitContainer2
+        '
+        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer2.Name = "SplitContainer2"
+        Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer2.Panel1
+        '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.ToolStrip1)
+        '
+        'SplitContainer2.Panel2
+        '
+        Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer1)
+        Me.SplitContainer2.Size = New System.Drawing.Size(789, 363)
+        Me.SplitContainer2.SplitterDistance = 57
+        Me.SplitContainer2.TabIndex = 1
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(789, 39)
+        Me.ToolStrip1.TabIndex = 0
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Agendas.My.Resources.Resources.Log_Off
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -224,61 +343,6 @@ Partial Class catalogo_medicos
         Me.Db_baseDataSet.DataSetName = "db_baseDataSet"
         Me.Db_baseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'btn_color
-        '
-        Me.btn_color.Location = New System.Drawing.Point(181, 138)
-        Me.btn_color.Name = "btn_color"
-        Me.btn_color.Size = New System.Drawing.Size(33, 23)
-        Me.btn_color.TabIndex = 12
-        Me.btn_color.Text = "..."
-        Me.btn_color.UseVisualStyleBackColor = True
-        '
-        'Id_medicoTextBox
-        '
-        Me.Id_medicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "id_medico", True))
-        Me.Id_medicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Id_medicoTextBox.Location = New System.Drawing.Point(263, 10)
-        Me.Id_medicoTextBox.Name = "Id_medicoTextBox"
-        Me.Id_medicoTextBox.ReadOnly = True
-        Me.Id_medicoTextBox.Size = New System.Drawing.Size(60, 26)
-        Me.Id_medicoTextBox.TabIndex = 1
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "Nombre", True))
-        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NombreTextBox.Location = New System.Drawing.Point(14, 39)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(311, 26)
-        Me.NombreTextBox.TabIndex = 3
-        '
-        'CelTextBox
-        '
-        Me.CelTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "cel", True))
-        Me.CelTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CelTextBox.Location = New System.Drawing.Point(75, 71)
-        Me.CelTextBox.Name = "CelTextBox"
-        Me.CelTextBox.Size = New System.Drawing.Size(249, 26)
-        Me.CelTextBox.TabIndex = 5
-        '
-        'EmailTextBox
-        '
-        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "email", True))
-        Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailTextBox.Location = New System.Drawing.Point(75, 103)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(248, 26)
-        Me.EmailTextBox.TabIndex = 7
-        '
-        'ColorTextBox
-        '
-        Me.ColorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MedicosBindingSource, "color", True))
-        Me.ColorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ColorTextBox.Location = New System.Drawing.Point(75, 135)
-        Me.ColorTextBox.Name = "ColorTextBox"
-        Me.ColorTextBox.Size = New System.Drawing.Size(100, 26)
-        Me.ColorTextBox.TabIndex = 11
-        '
         'MedicosTableAdapter
         '
         Me.MedicosTableAdapter.ClearBeforeFill = True
@@ -286,71 +350,42 @@ Partial Class catalogo_medicos
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.bitacoraTableAdapter = Nothing
         Me.TableAdapterManager.citasTableAdapter = Nothing
         Me.TableAdapterManager.EsquemaTableAdapter = Nothing
+        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
         Me.TableAdapterManager.medicosTableAdapter = Me.MedicosTableAdapter
+        Me.TableAdapterManager.notasTableAdapter = Nothing
+        Me.TableAdapterManager.sql_citasTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_directorioTableAdapter = Nothing
         Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
+        Me.TableAdapterManager.to_doTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'SplitContainer2
-        '
-        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer2.Name = "SplitContainer2"
-        Me.SplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer2.Panel1
-        '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.ToolStrip1)
-        '
-        'SplitContainer2.Panel2
-        '
-        Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer1)
-        Me.SplitContainer2.Size = New System.Drawing.Size(761, 327)
-        Me.SplitContainer2.SplitterDistance = 52
-        Me.SplitContainer2.TabIndex = 1
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(761, 39)
-        Me.ToolStrip1.TabIndex = 0
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.Agendas.My.Resources.Resources.Log_Off
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'catalogo_medicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(761, 327)
+        Me.ClientSize = New System.Drawing.Size(789, 363)
         Me.Controls.Add(Me.SplitContainer2)
         Me.Name = "catalogo_medicos"
         Me.Text = "catalogo_medicos"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         Me.SplitContainer1.Panel2.PerformLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.MedicosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImgFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_baseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -377,4 +412,6 @@ Partial Class catalogo_medicos
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents btn_color As System.Windows.Forms.Button
     Friend WithEvents ColorDialog1 As System.Windows.Forms.ColorDialog
+    Friend WithEvents ImgFoto As PictureBox
+    Friend WithEvents btn_foto As Button
 End Class

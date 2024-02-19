@@ -23,8 +23,8 @@ Partial Class frm_agenda
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_agenda))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -103,6 +103,7 @@ Partial Class frm_agenda
         Me.btn_tarde = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_completa = New System.Windows.Forms.ToolStripMenuItem()
         Me.lbl_user = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.SplitContainer6 = New System.Windows.Forms.SplitContainer()
         Me.btn_nowhats = New System.Windows.Forms.Button()
         Me.btn_addPersona = New System.Windows.Forms.Button()
@@ -143,7 +144,6 @@ Partial Class frm_agenda
         Me.Lista_esperaTableAdapter = New Agendas.db_baseDataSetTableAdapters.lista_esperaTableAdapter()
         Me.NotasTableAdapter = New Agendas.db_baseDataSetTableAdapters.notasTableAdapter()
         Me.TableAdapterManager = New Agendas.db_baseDataSetTableAdapters.TableAdapterManager()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.MedicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1018,6 +1018,15 @@ Partial Class frm_agenda
         Me.lbl_user.Size = New System.Drawing.Size(17, 36)
         Me.lbl_user.Text = "--"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
         'SplitContainer6
         '
         Me.SplitContainer6.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1438,15 +1447,6 @@ Partial Class frm_agenda
         Me.TableAdapterManager.tbl_usuariosTableAdapter = Nothing
         Me.TableAdapterManager.to_doTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Agendas.db_baseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'frm_agenda
         '

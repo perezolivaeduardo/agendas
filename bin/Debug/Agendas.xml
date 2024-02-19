@@ -62,6 +62,11 @@ Agendas
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Agendas.My.Resources.Resources.icon_doctor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Agendas.My.Resources.Resources.Index">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

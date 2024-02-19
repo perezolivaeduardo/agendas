@@ -900,5 +900,14 @@
         Exit Sub
     End Sub
 
-
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        infoIco.Visible = False
+        If EsNumeroCelularValido(txtcelular.Text) Then
+            Dim Dr As String = FN_NombreMedico(id_medico)
+            If WhatsApp_Confirmar_Cita(txtcelular.Text, Now.ToShortDateString, Now.ToShortTimeString, Dr) Then
+                lblinfo.Text = "WhatsApp enviado cel. : " + txtcelular.Text
+                infoIco.Visible = True
+            End If
+        End If
+    End Sub
 End Class

@@ -30,6 +30,11 @@ Module Sdk_msg
 
         Dim Template As String = "Le informamos que su cita con {{1}} quedó confirmada para el día {{2}} a las {{3}}
 Dudas o aclaraciones marcar al 9999286231 ó 9999239899 y con gusto te atenderemos."
+
+        Template = "Le informamos que su cita con {{1}} quedó confirmada para el día {{2}} a las {{3}}.
+Dudas o aclaraciones marcar al 9999286231 o 9999239899 y con gusto te atenderemos.
+Calle 76 N.º446 X 45 y 47, Mérida, México."
+
         Template = Template.Replace("{{1}}", medico)
         Template = Template.Replace("{{2}}", fe)
         Template = Template.Replace("{{3}}", hr.ToShortTimeString)

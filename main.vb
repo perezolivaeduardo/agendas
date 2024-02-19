@@ -1,8 +1,9 @@
 ﻿Public Class main
 
-    
+
     Private Sub main_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         inicializa()
+
 
         Dim f As Integer = FreeFile()
         Try
@@ -16,7 +17,7 @@
 
         My.Forms.login.ShowDialog()
         If My.Forms.login.login = False Then End
-        
+
         If user_nivel.ToString < 1 Then ToolStrip1.Visible = False
         Me.Top = 1 : Me.Left = 0
         Me.Height = 550

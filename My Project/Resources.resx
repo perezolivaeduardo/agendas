@@ -142,6 +142,9 @@
   <data name="Windows Calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows Calendar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nowhatsapp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nowhatsapp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Decrypted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Decrypted.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,14 +160,14 @@
   <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendario.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo verde_mediano" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo verde_mediano.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Index" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Index.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notification_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notification_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Log_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log Off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Firewall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Firewall.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +184,8 @@
   <data name="Error 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Error 2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Log_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Log Off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo verde_mediano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo verde_mediano.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Printer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +196,7 @@
   <data name="minilogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minilogo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nowhatsapp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nowhatsapp1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
