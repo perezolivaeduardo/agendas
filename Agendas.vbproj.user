@@ -2,7 +2,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PublishUrlHistory>C:\tmp\agendas\|D:\agendas\|ftp://www.clinicaesperanza.com.mx/public_html/sistemas/agendas/|ftp://clinicaesperanza.com.mx/public_html/sistemas/agendas/|ftp://domains/clinicaesperanza.com.mx/public_html/sistemas/agendas/</PublishUrlHistory>
-    <InstallUrlHistory>http://www.clinicaesperanza.com.mx/sistemas/agendas_web/|http://www.clinicaesperanza.com.mx/sistemas/agendas/|http://www.clinicaesperanza.com.mx/sitemas/agendas/|http://www.programacionintegral.com/sitemas/clinica/agendas/</InstallUrlHistory>
+    <InstallUrlHistory>http://www.clinicaesperanza.com.mx/sistemas/agendas/|http://www.clinicaesperanza.com.mx/sistemas/agendas_web/|http://www.clinicaesperanza.com.mx/sitemas/agendas/|http://www.programacionintegral.com/sitemas/clinica/agendas/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />

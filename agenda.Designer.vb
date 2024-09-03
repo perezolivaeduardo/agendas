@@ -24,7 +24,7 @@ Partial Class frm_agenda
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_agenda))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -975,7 +975,6 @@ Partial Class frm_agenda
         '
         'boton_cancelar
         '
-        Me.boton_cancelar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.boton_cancelar.Image = CType(resources.GetObject("boton_cancelar.Image"), System.Drawing.Image)
         Me.boton_cancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.boton_cancelar.Name = "boton_cancelar"
@@ -1379,9 +1378,9 @@ Partial Class frm_agenda
         '
         Me.NotaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NotaDataGridViewTextBoxColumn.DataPropertyName = "nota"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.NotaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.NotaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.NotaDataGridViewTextBoxColumn.HeaderText = ""
         Me.NotaDataGridViewTextBoxColumn.Name = "NotaDataGridViewTextBoxColumn"
         Me.NotaDataGridViewTextBoxColumn.ReadOnly = True
@@ -1437,9 +1436,8 @@ Partial Class frm_agenda
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.bitacoraTableAdapter = Nothing
         Me.TableAdapterManager.citasTableAdapter = Nothing
-        Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.EsquemaTableAdapter = Nothing
-        Me.TableAdapterManager.lista_esperaTableAdapter = Nothing
+        Me.TableAdapterManager.lista_esperaTableAdapter = Me.Lista_esperaTableAdapter
         Me.TableAdapterManager.medicosTableAdapter = Nothing
         Me.TableAdapterManager.notasTableAdapter = Nothing
         Me.TableAdapterManager.sql_citasTableAdapter = Nothing

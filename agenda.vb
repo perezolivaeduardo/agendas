@@ -388,9 +388,10 @@
             Me.Lista_esperaBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.Db_baseDataSet)
         Catch ex As Exception
-
+            MsgBox("No se pudo borrar de la lista")
+            MsgBox(ex.Message)
         End Try
-        
+
     End Sub
 
     Private Sub EditarCitaToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles EditarCitaToolStripMenuItem.Click
@@ -441,7 +442,7 @@
         SplitContainer7.Panel2Collapsed = True
     End Sub 'cancelar cambio de cita
 
-   
+
 
     Private Sub cambiar_fecha_de_cita()
         'aplica cambio de cita
@@ -910,4 +911,6 @@
             End If
         End If
     End Sub
+
+
 End Class

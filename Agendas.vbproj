@@ -33,13 +33,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://www.clinicaesperanza.com.mx/sistemas/agendas_web/</InstallUrl>
+    <InstallUrl>http://www.clinicaesperanza.com.mx/sistemas/agendas/</InstallUrl>
     <ProductName>Agenda</ProductName>
     <PublisherName>Eduardo Perez Oliva</PublisherName>
     <SuiteName>Administracion Integral</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
-    <ApplicationRevision>27</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -71,7 +71,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>562F4C8143EC9B32CDF88751525CD3FDCAA96FA7</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>86317264D360DEC20DC16024E726DDD6DA8D50FF</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
